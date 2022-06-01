@@ -1,0 +1,14 @@
+{
+  "user_entity": "correspondent.APX1",
+  "user_ip": "127.183.105.159",
+  "sub": "apex_api",
+  "aud": [
+    "apexclearing.com"
+  ],
+  "nbf": 1526914436,
+  "iss": "apexclearing.com",
+  "user_class": "CLIENT_CREDENTIALS_USER",
+  "exp": 1527004736,
+  "iat": 1526914736,
+  "jti": "4e7354ee-d997-4c31-bac3-9f11a229ecb1"
+}

@@ -1,0 +1,30 @@
+{
+  "externalId": "test123456",
+  "account": "XXX12345",
+  "symbol": "AAPL",
+  "side": "SELL",
+  "quantityType": "FRACTIONAL",
+  "quantity": 0.25843,
+  "fdid": "ABC123",
+  "accountHolderType": "INDIVIDUAL",
+  "accountType": "CASH",
+  "charges": {
+    "commissionAmount": 10.5,
+    "fees": [
+      {
+        "feeType": "CLIENT_CLEARING",
+        "feeAmount": 0.5
+      }
+    ]
+  },
+  "lotMatchingInstructions": [
+    {
+      "tradeDate": "2019-01-30",
+      "quantity": 0.2
+    },
+    {
+      "tradeDate": "2020-01-30",
+      "quantity": 0.05843
+    }
+  ]
+}

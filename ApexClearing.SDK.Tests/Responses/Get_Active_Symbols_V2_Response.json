@@ -1,0 +1,17 @@
+{
+  "canTrade": [
+    "DIA",
+    "DIS",
+    "GDX",
+    "JPM",
+    "QQQ",
+    "SBUX",
+    "SPY"
+  ],
+  "canLiquidate": [
+    "T",
+    "WMT",
+    "XLF",
+    "ZZVZT"
+  ]
+}

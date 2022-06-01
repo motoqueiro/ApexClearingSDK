@@ -1,0 +1,8 @@
+{
+  "externalId": "test12345",
+  "account": "XXX12345",
+  "symbol": "AAPL",
+  "side": "BUY",
+  "quantityType": "NOTIONAL",
+  "quantity": 50.00
+}

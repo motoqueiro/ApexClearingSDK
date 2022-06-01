@@ -1,0 +1,8 @@
+{
+  "externalId": "test123456",
+  "account": "XXX12345",
+  "symbol": "AAPL",
+  "side": "BUY",
+  "quantityType": "FRACTIONAL",
+  "quantity": 0.25843
+}

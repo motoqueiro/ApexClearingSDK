@@ -1,0 +1,29 @@
+{
+  "externalId": "504d7915-eadd-4897-a7e7-da3045fb25aa",
+  "tradeDate": "2020-12-08",
+  "status": {
+    "code": "FILLED",
+    "time": "2020-12-08T17:56:57.214Z"
+  },
+  "fill": {
+    "shares": "1",
+    "averagePrice": "127.3300"
+  },
+  "order": {
+    "symbol": "IBM",
+    "side": "BUY",
+    "timeInForce": "DAY",
+    "orderType": "MARKET",
+    "quantity": {
+      "amount": "1",
+      "type": "FRACTIONAL"
+    },
+    "accountDetails": {
+      "account": "9BY99876",
+      "accountType": "CASH",
+      "accountHolderType": "INDIVIDUAL",
+      "fdid": "ABCDEZYWXV"
+    },
+    "receivedTime": "2020-12-08T17:56:56.549Z"
+  }
+}
