@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Debug": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "APEXCLEARING_SHAREDSECRET": "tRfZfS6k327DUd1KRCrsnjvhIxoGOaS-qUtTjxoGX48cTXdOpRHGIPrHhvsyM_L3rNjH22qNKMUs6lKHuPR8bQ",
+        "APEXCLEARING_ENTITY": "correspondent.ETRO",
+        "APEXCLEARING_USERNAME": "apex_api"
+      }
+    }
+  }
+}

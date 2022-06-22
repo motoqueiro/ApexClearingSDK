@@ -1,3 +1,4 @@
+using ApexClearing.SDK.Models;
 using ApexClearing.SDK.Models.Enums;
 
 namespace ApexClearing.SDK.IntegrationTests
@@ -9,9 +10,14 @@ namespace ApexClearing.SDK.IntegrationTests
         public ApexClearingClientIntegrationTests()
         {
             var apiEnvironment = ApiEnvironment.Test;
-            var clientCredentialsPath = ResolveClientCredentialsPath(apiEnvironment);
+            var clientCredentials = new ClientCredentials
+            {
+                Username = Environment.GetEnvironmentVariable("APEXCLEARING_USERNAME"),
+                Entity = Environment.GetEnvironmentVariable("APEXCLEARING_ENTITY"),
+                SharedSecret = Environment.GetEnvironmentVariable("APEXCLEARING_SHAREDSECRET")
+            };
             _client = new ApexAPIClient(
-                clientCredentialsPath,
+                clientCredentials,
                 apiEnvironment);
         }
 
