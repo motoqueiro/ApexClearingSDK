@@ -37,7 +37,7 @@ jobs:
         APEXCLEARING_SHAREDSECRET: ${{ secrets.APEXCLEARING_SHAREDSECRET }}
 
     - name: Pack NuGet
-      run: dotnet pack ApexClearing.SDK/ApexClearing.SDK.csproj -C Release --no-build
+      run: dotnet pack ApexClearing.SDK/ApexClearing.SDK.csproj -c Release --no-build
 
     - name: Publish NuGet
       uses: brandedoutcast/publish-nuget@v2.5.5
