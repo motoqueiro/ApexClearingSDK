@@ -16,19 +16,27 @@ The resources/functionalities supported are listed on the following table:
             <td rowspan=4>
                 <a href="https://developer.apexclearing.com/apexclearing/reference/authorization-main" target="_blank">Authorization</a>
             </td>
-            <td>Generate JWS</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/authorization-main#generating-a-jws-from-client-credentials" target="_blank">Generate JWS</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Request JWT</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/authorization-main#section-request-a-jwt-access-token" target="_blank">Request JWT</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Verify Token</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/authorization-main#verify-a-token" target="_blank">Verify Token</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Logout / Invalidate Token</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/authorization-main#logout--invalidate-a-token" target="_blank">Logout / Invalidate Token</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
@@ -55,7 +63,9 @@ The resources/functionalities supported are listed on the following table:
             <td rowspan=7>
                 <a href="https://developer.apexclearing.com/apexclearing/reference/orders-main" target="_blank">Orders</a>
             </td>
-            <td>Initiate an Order</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/orders-main#initiate-an-order" target="_blank">Initiate an Order</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
@@ -67,19 +77,27 @@ The resources/functionalities supported are listed on the following table:
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Retrieve A List of Active Symbols v1</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/orders-main#retrieve-a-list-of-active-symbols-v1" target="_blank">Retrieve A List of Active Symbols v1</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Retrieve A List of Active Symbols v2</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/orders-main#retrieve-a-list-of-active-symbols-v2" target="_blank">Retrieve A List of Active Symbols v2</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Get Order Details</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/orders-main#get-order-details" target="_blank">Get Order Details</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Cancel an Order</td>
+            <td>
+                <a href="https://developer.apexclearing.com/apexclearing/reference/orders-main#cancel-an-order" target="_blank">Cancel an Order</a>
+            </td>
             <td>:heavy_check_mark:</td>
         </tr>
         <tr>
@@ -99,4 +117,15 @@ The resources/functionalities supported are listed on the following table:
 
 ## Samples
 
-The way to use the api can be found by consulting the integration tests at <https://github.com/motoqueiro/ApexClearingSDK/blob/main/ApexClearing.SDK.IntegrationTests/ApexClearingClientIntegrationTests.cs>
+```
+var clientCredentials = new ClientCredentials
+{
+    Username = Environment.GetEnvironmentVariable("APEXCLEARING_USERNAME"),
+    Entity = Environment.GetEnvironmentVariable("APEXCLEARING_ENTITY"),
+    SharedSecret = Environment.GetEnvironmentVariable("APEXCLEARING_SHAREDSECRET")
+};
+var client = new ApexAPIClient(clientCredentials);
+var status = await _client.Orders.GetStatusAsync();
+```
+
+More examples can be found by consulting the integration tests at <https://github.com/motoqueiro/ApexClearingSDK/blob/main/ApexClearing.SDK.IntegrationTests/ApexClearingClientIntegrationTests.cs>
