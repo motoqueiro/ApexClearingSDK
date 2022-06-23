@@ -23,7 +23,7 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build -c Release --no-restore
 
     - name: Unit Tests
       run: dotnet test ApexClearing.SDK.UnitTests/ApexClearing.SDK.UnitTests.csproj --no-build --verbosity normal
@@ -37,7 +37,7 @@ jobs:
         APEXCLEARING_SHAREDSECRET: ${{ secrets.APEXCLEARING_SHAREDSECRET }}
 
     - name: Pack NuGet
-      run: dotnet pack ApexClearing.SDK/ApexClearing.SDK.csproj -c Release --no-build
+      run: dotnet pack ApexClearing.SDK/ApexClearing.SDK.csproj -c Release
 
     - name: Publish NuGet
       uses: brandedoutcast/publish-nuget@v2.5.5
