@@ -25,8 +25,12 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
 
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+    - name: Unit Tests
+      run: dotnet test ApexClearing.SDK.UnitTests/ApexClearing.SDK.UnitTests.csproj --no-build --verbosity normal
+
+    - name: Integration Test
+      run: dotnet test ApexClearing.SDK.IntegrationTests/ApexClearing.SDK.IntegrationTests.csproj --no-build --verbosity normal
+      if: ${{ false }}
       env:
         APEXCLEARING_USERNAME: ${{ secrets.APEXCLEARING_USERNAME }}
         APEXCLEARING_ENTITY: ${{ secrets.APEXCLEARING_ENTITY }}
