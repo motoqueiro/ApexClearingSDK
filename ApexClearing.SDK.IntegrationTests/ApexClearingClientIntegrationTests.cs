@@ -10,12 +10,10 @@ namespace ApexClearing.SDK.IntegrationTests
         public ApexClearingClientIntegrationTests()
         {
             var apiEnvironment = ApiEnvironment.Test;
-            var clientCredentials = new ClientCredentials
-            {
-                Username = Environment.GetEnvironmentVariable("APEXCLEARING_USERNAME"),
-                Entity = Environment.GetEnvironmentVariable("APEXCLEARING_ENTITY"),
-                SharedSecret = Environment.GetEnvironmentVariable("APEXCLEARING_SHAREDSECRET")
-            };
+            var clientCredentials = new ClientCredentials(
+                Environment.GetEnvironmentVariable("APEXCLEARING_USERNAME"),
+                Environment.GetEnvironmentVariable("APEXCLEARING_ENTITY"),
+                Environment.GetEnvironmentVariable("APEXCLEARING_SHAREDSECRET"));
             _client = new ApexAPIClient(
                 clientCredentials,
                 apiEnvironment);

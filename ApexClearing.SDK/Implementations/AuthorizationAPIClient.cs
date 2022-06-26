@@ -4,10 +4,8 @@ using ApexClearing.SDK.Models.Response;
 using Flurl;
 using Flurl.Http;
 using Jose;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -77,7 +75,7 @@ namespace ApexClearing.SDK.Implementations
         public string GenerateJWSFromClientCredentials()
         {
             var privateKey = Encoding.UTF8.GetBytes(_clientCredentials.SharedSecret);
-            
+
             var options = JwtOptions.Default;
             options.EncodePayload = true;
 
@@ -107,20 +105,6 @@ namespace ApexClearing.SDK.Implementations
 
             var token = await AuthenticateAsync(cancellationToken);
             call.Request.WithHeader("Authorization", token);
-        }
-
-        internal static ClientCredentials ReadCredentialsFile(string credentialsFilePath)
-        {
-            if (string.IsNullOrWhiteSpace(credentialsFilePath))
-            {
-                throw new ArgumentNullException(nameof(credentialsFilePath));
-            }
-
-            using (var sr = new StreamReader(credentialsFilePath))
-            {
-                var json = sr.ReadToEnd();
-                return JsonConvert.DeserializeObject<ClientCredentials>(json);
-            }
         }
     }
 }

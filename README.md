@@ -117,13 +117,18 @@ The resources/functionalities supported are listed on the following table:
 
 ## Samples
 
+Using the following client credentials json file sample provided by Apex CLearing
+
 ```
-var clientCredentials = new ClientCredentials
 {
-    Username = Environment.GetEnvironmentVariable("APEXCLEARING_USERNAME"),
-    Entity = Environment.GetEnvironmentVariable("APEXCLEARING_ENTITY"),
-    SharedSecret = Environment.GetEnvironmentVariable("APEXCLEARING_SHAREDSECRET")
-};
+    "username": "apex_api",
+    "entity": "correspondent.apx1",
+    "sharedSecret": "<secret key>"
+}
+```
+
+```
+var clientCredentials = ClientCredentials.BuildFromCredentialsFile("sample_credentials.json");
 var client = new ApexAPIClient(clientCredentials);
 var status = await _client.Orders.GetStatusAsync();
 ```

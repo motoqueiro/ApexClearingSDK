@@ -18,7 +18,7 @@ namespace ApexClearing.SDK
         public IOrdersAPIClient Orders { get; private set; }
 
         public ApexAPIClient(string credentialsFilePath, ApiEnvironment apiEnvironment = ApiEnvironment.Production)
-            : this(AuthorizationAPIClient.ReadCredentialsFile(credentialsFilePath), apiEnvironment)
+            : this(ClientCredentials.BuildFromCredentialsFile(credentialsFilePath), apiEnvironment)
         { }
 
         public ApexAPIClient(

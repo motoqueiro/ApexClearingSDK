@@ -18,7 +18,7 @@ namespace ApexClearing.SDK.UnitTests
         public void AuthorizationAPIClient_ReadCredentialsFile_ShouldReturnClientCredentials()
         {
             //Act
-            var clientCredentials = AuthorizationAPIClient.ReadCredentialsFile(ClientCredentialsFilePath);
+            var clientCredentials = Models.ClientCredentials.BuildFromCredentialsFile(ClientCredentialsFilePath);
 
             //Assert
             clientCredentials.Should().NotBeNull();

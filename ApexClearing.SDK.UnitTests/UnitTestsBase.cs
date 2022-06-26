@@ -30,7 +30,7 @@ namespace ApexClearing.SDK.UnitTests
 
         internal static string ClientCredentialsFilePath => "client_credentials.json";
 
-        internal static ClientCredentials ClientCredentials => AuthorizationAPIClient.ReadCredentialsFile(ClientCredentialsFilePath);
+        internal static ClientCredentials ClientCredentials => ClientCredentials.BuildFromCredentialsFile(ClientCredentialsFilePath);
 
         internal T LoadRequestFromFile<T>(string filePath)
         {
