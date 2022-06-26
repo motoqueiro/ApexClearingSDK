@@ -7,6 +7,7 @@
     <RepositoryUrl>https://github.com/motoqueiro/ApexClearingSDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>aa</NeutralLanguage>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
