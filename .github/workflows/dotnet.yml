@@ -30,10 +30,6 @@ jobs:
 
     - name: Integration Test
       run: dotnet test ApexClearing.SDK.IntegrationTests/ApexClearing.SDK.IntegrationTests.csproj --no-build --verbosity normal -c Release
-      env:
-        APEXCLEARING_USERNAME: ${{ secrets.APEXCLEARING_USERNAME }}
-        APEXCLEARING_ENTITY: ${{ secrets.APEXCLEARING_ENTITY }}
-        APEXCLEARING_SHAREDSECRET: ${{ secrets.APEXCLEARING_SHAREDSECRET }}
 
     - name: Pack NuGet
       run: dotnet pack ApexClearing.SDK/ApexClearing.SDK.csproj -c Release
